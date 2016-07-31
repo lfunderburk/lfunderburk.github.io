@@ -52,7 +52,7 @@ p {
 	background-color: black;/*#666666*/
 	height: 400px;
 	width: 800px;
-	margin: 20px 40px 20px 40px;
+	margin: 20px 40px 50px 40px;
 	text-align: left;
 	float: center;
 }
@@ -143,6 +143,28 @@ span {
 	color:	#FFB6C1;
 	text-align:center;
 }
+
+#i{
+	font-family: Freestyle Script;
+	font-size: 50px;
+	color:	white;
+	text-align:center;
+}
+
+#c{
+	font-family: Freestyle Script;
+	font-size: 50px;
+	color:	brown;
+	text-align:center;
+}
+
+#r{
+	font-family: Freestyle Script;
+	font-size: 50px;
+	color:	grey;
+	text-align:center;
+}
+
 #listdes{
 	font-family: Garamond, Freestyle Script;
 	font-size: 20px;
