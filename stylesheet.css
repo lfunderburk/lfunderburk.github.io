@@ -1,6 +1,6 @@
 li{
 	text-align: left;
-	font-family: Garamond, Freestyle Script, serif;
+	font-family: Garamond;
 	font-size: 20px;
 	color: white;
 }
@@ -14,7 +14,7 @@ img {
 
 p {
 	text-align: center;
-	font-family: Garamond, Freestyle Script, serif;
+	font-family: Garamond;
 	font-size: 20px;
 	color: white;
 }
@@ -59,14 +59,15 @@ p {
 a {
 	text-decoration: none;
 	color: #3D59AB;
-	font-family: Garamond, Verdana, sans-serif;
+	font-family: Garamond;
+	font-size: 20px;
 }
 
 span {
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 20px;
 	color: #ffffff;
-	font-family: Garamond,Corsiva;
+	font-family: Garamond;
 }
 
 #title {
@@ -89,77 +90,77 @@ span {
 	}
 
 #syn {
-	font-family: Freestyle Script;
+	font-family: Freestyle Script, Garamond;
 	font-size: 44px;
 	color:white;
 	text-align:center;
 }
 
 #s {
-	font-family: Freestyle Script;
+	font-family: Freestyle Script, Garamond;
 	font-size: 50px;
 	color:red;
 	text-align:center;
 }
 
 #y {
-	font-family: Freestyle Script;
+	font-family: Freestyle Script,Garamond;
 	font-size: 50px;
 	color:orange;
 	text-align:center;
 }
 
 #n {
-	font-family: Freestyle Script;
+	font-family: Freestyle Script, Garamond;
 	font-size: 50px;
 	color:yellow;
 	text-align:center;
 }
 
 #a{
-	font-family: Freestyle Script;
+	font-family: Freestyle Script, Garamond;
 	font-size: 50px;
 	color:green;
 	text-align:center;
 }
 
 #e{
-	font-family: Freestyle Script;
+	font-family: Freestyle Script, Garamond;
 	font-size: 50px;
 	color:#1E90FF;
 	text-align:center;
 }
 
 #t{
-	font-family: Freestyle Script;
+	font-family: Freestyle Script,Garamond;
 	font-size: 50px;
 	color:	#8A2BE2;
 	text-align:center;
 }
 
 #h{
-	font-family: Freestyle Script;
+	font-family: Freestyle Script, Garamond;
 	font-size: 50px;
 	color:	#FFB6C1;
 	text-align:center;
 }
 
 #i{
-	font-family: Freestyle Script;
+	font-family: Freestyle Script, Garamond;
 	font-size: 50px;
 	color:	white;
 	text-align:center;
 }
 
 #c{
-	font-family: Freestyle Script;
+	font-family: Freestyle Script, Garamond;
 	font-size: 50px;
 	color:	brown;
 	text-align:center;
 }
 
 #r{
-	font-family: Freestyle Script;
+	font-family: Freestyle Script, Garamond;
 	font-size: 50px;
 	color:	grey;
 	text-align:center;
