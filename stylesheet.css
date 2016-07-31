@@ -31,6 +31,19 @@ p {
 	float: center;
 }
 
+#profile{
+
+	border-radius: 5px;
+	border: 2px solid #ff80b3;
+	background-color: #ff0066;
+	height: 50px;
+	width: 200px;
+	margin: 0px 50px 0px 550px;
+	text-align: center;
+	display:inline-block;
+	float: center;
+}
+
 
 .section {
 	display: inline-block;
