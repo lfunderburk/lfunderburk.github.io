@@ -104,6 +104,13 @@ span {
 	color:white;
 	text-align: left;
 	}
+	
+#cont{
+	font-family: Garamond, Freestyle Script;
+	font-size: 20px;
+	color:white;
+	text-align: center;
+	}
 
 #syn {
 	font-family: Freestyle Script, Garamond;
