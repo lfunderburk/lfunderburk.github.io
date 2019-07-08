@@ -48,8 +48,8 @@ p {
 .section {
 	display: inline-block;
 	border-radius: 5px;
-	border: 2px solid black/*#a6a6a6*/;
-	background-color: black;/*#666666*/
+	border: 2px solid #7F0037/*#a6a6a6*/;
+	background-color: #7F0037;/*#666666*/
 	height: 400px;
 	width: 800px;
 	margin-left: auto;
@@ -62,8 +62,8 @@ p {
 .smallsection {
 	display: inline-block;
 	border-radius: 5px;
-	border: 2px solid black/*#a6a6a6*/;
-	background-color: black;/*#666666*/
+	border: 2px solid #7F0037/*#a6a6a6*/;
+	background-color: #7F0037;/*#666666*/
 	height: 200px;
 	width: 800px;
 	margin-left: auto;
@@ -76,8 +76,8 @@ p {
 .bigsection {
 	display: inline-block;
 	border-radius: 5px;
-	border: 2px solid black/*#a6a6a6*/;
-	background-color: black;/*#666666*/
+	border: 2px solid #7F0037/*#a6a6a6*/;
+	background-color: #7F0037;/*#666666*/
 	height: 750px;
 	width: 800px;
 	margin-left: auto;
