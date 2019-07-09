@@ -87,8 +87,8 @@ p {
 	/*float: center;*/
 }
 a {
-	/*text-decoration: none;*/
-	color: #f7e390;
+	text-decoration: none;
+	color: #ffffff;/*#f7e390;*/
 	font-family: Garamond;
 	font-size: 20px;
 }
