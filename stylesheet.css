@@ -87,16 +87,15 @@ p {
 	/*float: center;*/
 }
 a {
-	text-decoration: none;
+	/*text-decoration: none;*/
 	color: #f7e390;
 	font-family: Garamond;
 	font-size: 20px;
 }
 
 span {
-	font-weight: bold;
 	font-size: 20px;
-	color: #ffffff;
+	color: #f7e390;
 	font-family: Garamond;
 }
 
