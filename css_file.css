@@ -1,0 +1,39 @@
+.highlight{
+  color: green;
+}
+
+h1{
+  color:black;
+}
+
+h2{
+  color:maroon;
+  font-size: 24px;
+}
+
+h3{
+  color:maroon;
+}
+
+p{
+  color:black;
+}
+
+article div h2{
+  color:maroon;
+  font-size: 28px;
+}
+
+body{
+  color: goldenrod;
+  background: #rosybrown;
+  font:Comfortaa
+}
+
+.section-title{
+  color:saddlebrown;
+}
+
+.skill-label{
+  color:darkred;
+}
