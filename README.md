@@ -1,4 +1,4 @@
 # Personal Website
 
 
-This repository contains html and css files for personal website [lfunderburk.github.io](lfunderburk.github.io).
+Here you can find a summary of latest projects, speaking engagements (along with slides) and links to blog posts.
