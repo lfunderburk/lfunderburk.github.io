@@ -1,0 +1,335 @@
+/* Basic styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+  }
+  
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+
+  header h1 {
+    color: #fff;
+  }
+  
+  nav {
+    background-color: #333;
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Add this to your existing styles.css */
+  .nav-button {
+    margin-right: 1rem;
+  }
+  
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  nav a:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropbtn:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  .indented-list {
+    padding-left: 1.5rem; /* Adjust the value as needed */
+  }
+
+  .indented-list li {
+    padding-right: 1rem;
+    list-style: none;
+  }
+
+  .indented-list li::before {
+    content: "★"; /* Change the bullet symbol to a star */
+    padding-right: 0.5rem;
+    color: rgb(236, 188, 14); /* Optionally, add a color for the bullet symbol */
+  }
+  main {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    padding: 1rem;
+    max-width: 1200px; /* Add this line */
+    margin-left: auto; /* Add this line */
+    margin-right: auto; /* Add this line */
+  }
+
+
+
+  .content-section {
+    padding: 1rem;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    width: 80%;
+    max-width: 1000px; /* Add this line */
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2, h3 {
+    color: #444;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  table tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #e8e8e8;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #333; /* Change this value */
+    color: #fff; /* Change this value */
+  }
+  
+  button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 1rem;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  a {
+    color: #333;
+  }
+  
+  a:hover {
+    color: #555;
+  }
+
+  .nav-button {
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+  
+  .nav-button:hover {
+    background-color: #555;
+  }
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+  
+    nav {
+      padding-top: 0;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .nav-button {
+      font-size: 14px;
+      padding: 0.25rem 0.5rem;
+      margin: 0.25rem;
+    }
+  
+    main {
+      max-width: 100%;
+      padding: 1rem;
+    }
+  
+    .content-section {
+      width: 100%;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    p, table {
+      font-size: 1rem;
+    }
+  
+    table {
+      width: 100%;
+      table-layout: fixed;
+      word-wrap: break-word;
+    }
+  
+    th, td {
+      padding: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 350px) {
+    .one {
+       width: auto;
+ 
+    }
+    .two {
+       width: auto;
+    }
+    .three {
+       width: auto;
+    }
+ }
+ 
+ @media screen and (max-width:600px) {
+   .column.side, .column.middle{
+     width: 100%;
+   }}
+
+   .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .project {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .project img {
+    width: 100%;
+    transition: transform 0.3s;
+  }
+  
+  .project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .project:hover img {
+    transform: scale(1.1);
+  }
+  
+  .project:hover .project-info {
+    opacity: 1;
+  }
+
+  .horizontal-bullet {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .horizontal-bullet li {
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+
+  .horizontal-bullet li::before {
+    content: "★"; /* Change the bullet symbol to a star */
+    padding-right: 0.5rem;
+    color: #f00; /* Optionally, add a color for the bullet symbol */
+  }
+  
+  
+  
+  
