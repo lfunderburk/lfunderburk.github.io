@@ -136,8 +136,18 @@
     width: 80%;
     max-width: 1000px; /* Add this line */
     box-sizing: border-box;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
+
+  .content-gif{
+    padding: 1rem;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    width: 40%;
+    max-width: 1000px; /* Add this line */
+    box-sizing: border-box;
+  }
+  
   
   h1, h2, h3 {
     color: #444;
@@ -330,6 +340,34 @@
     color: #f00; /* Optionally, add a color for the bullet symbol */
   }
   
-  
-  
-  
+  .side-by-side-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1rem;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    width: 80%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+/* Go to the top button styling */
+.go-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.go-to-top:hover {
+  background-color: #555;
+}
