@@ -8,8 +8,16 @@
 </head>
 <body>
   <header>
-    <h1>Laura Funderburk</h1>
-  </header>
+    <div class="header-image">
+      <img src="./assets/line-graph.gif" alt="Your image description">
+    </div>
+    <div class="header-content">
+      <h1>Laura Funderburk</h1>
+      <h2>Data Scientist</h2>
+    </div>
+    <div class="header-image">
+      <img src="./assets/line-graph.gif" alt="Your image description">
+    </div>
   </header>
   <main>
     <div class="side-by-side-container">
@@ -21,66 +29,68 @@
       </section>
 
       <section class="content-gif">
-          <img src="ds.gif" alt="Header GIF" width="110%">
+          <img src="./assets/giphy.gif" alt="Header GIF" width="110%">
       </section>
     </div>
+
+    <section id="portfolio" class="content-section">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <!-- Add as many projects as needed -->
+        <div class="project">
+          <a href="project1.html">
+            <img src="project1.jpg" alt="Project 1">
+            <div class="project-info">
+              <h3>Project 1</h3>
+              <p>Keyword 1, Keyword 2, Keyword 3</p>
+            </div>
+          </a>
+        </div>
+        <!-- ... -->
+      </div>
+    </section>
+
     <section id="skills" class="content-section">
         <h2>Skills, frameworks and technology</h2>
-        <h4> Languages and tools</h4>
-        <ul class="horizontal-bullet">
-            <li>Python (pandas, seaborn, matplotlib, requests, json, plotly, dash, FastAPI, Flask)</li>
-            <li>Docker</li>
-            <li>Bash</li>
-            <li>SQL (Microsoft SQL Server, SQLite, DuckDB, sqlalchemy)</li>
-            <li>Git and Github</li>
-            
-        </ul>
-        <h4>Machine learning and Artificial Intelligence</h4>
-        <ul class="horizontal-bullet">
-            <li>sklearn</li>
-            <li>tensorflow</li>
-            <li>keras</li>
-            <li>pytorch</li>
-            <li>scipy</li>
-            <li>Supervised learning (linear and logistic regression, decision trees, random forest walk)</li>
-            <li>Unsupervised learning (clustering, dimensionality reduction)</li>
-            <li>Neural networks: (CNN, RNN)</li>
-            <li>Time series analysis</li>
-            <li>Model evaluation and optimization</li>
-            <li>Feature engineering</li>
-            <li>Model fairness</li>
-            <li>Model interpretability</li>
-            <li>Model performance</li>
-            <li>Model selection</li>
-            <li>Model tuning</li>
+        <button id="toggleSkills" class="skills-toggle">Expand skills</button>
+        <div id="skillsList" style="display:none;">
+          <h4> Languages and tools</h4>
+          <ul class="indented-list">
+              <li>Python (pandas, seaborn, matplotlib, requests, json, plotly, dash, FastAPI, Flask)</li>
+              <li>Docker</li>
+              <li>Bash</li>
+              <li>SQL (Microsoft SQL Server, SQLite, DuckDB, sqlalchemy)</li>
+              <li>Git and Github</li>
+              
           </ul>
-          <h4>Deployment methods</h4>
-        <ul class="horizontal-bullet">
-            <li>AWS</li>
-            <li>Google Cloud</li>
-          </ul>
+          <h4>Machine learning and Artificial Intelligence</h4>
+          <ul class="indented-list">
+              <li>sklearn</li>
+              <li>tensorflow</li>
+              <li>keras</li>
+              <li>scipy</li>
+              <li>Supervised learning (linear and logistic regression, decision trees, random forest walk, time series analysis)</li>
+              <li>Unsupervised learning (clustering, dimensionality reduction)</li>
+              <li>Neural networks: (CNN, RNN)</li>
+              <li>Feature engineering</li>
+              <li>Hyperparameter tuning</li>
+              <li>Model selection, evaluation and optimization, interpretability, performance</li>
+            </ul>
+            <h4>Deployment methods</h4>
+          <ul class="indented-list">
+              <li>AWS</li>
+              <li>Google Cloud</li>
+            </ul>
+          </div>
       </section>
+      <script src="skills.js"></script>
+
     <section id="Outside" class="content-section">
         <h2>Outside work &#129355; &#42894; &#127795; </h2>
         <p>I love the outdoors and I recently started training Brazilian Jiu-jitsu. I am working towards a blue belt by end of 2023. Being part of the open source community is extremely meaningful to me, I like co-organizing events, speaking at conferences and contributing to open source.</p>
       </section>
 
-      <section id="portfolio" class="content-section">
-        <h2>Portfolio</h2>
-        <div class="portfolio-grid">
-          <!-- Add as many projects as needed -->
-          <div class="project">
-            <a href="project1.html">
-              <img src="project1.jpg" alt="Project 1">
-              <div class="project-info">
-                <h3>Project 1</h3>
-                <p>Keyword 1, Keyword 2, Keyword 3</p>
-              </div>
-            </a>
-          </div>
-          <!-- ... -->
-        </div>
-      </section>
+      
     <section id="speaking" class="content-section">
         <h2>Speaking Engagements</h2>
         <button id="toggleTable">Expand list of talks</button>

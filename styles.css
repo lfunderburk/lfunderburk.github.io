@@ -15,17 +15,40 @@
   
   
   header {
-    background-color: #333;
+    background-color: #171717;
     color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem; /* Adjust the padding if needed */
+    height: 90px; /* Set a fixed height for the header */
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
+
+.header-content {
+  padding-left: 1rem;
+}
+
+.header-image {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.header-image img {
+  width: 100px; /* Adjust the image width as needed */
+  height: auto;
+}
+
   header h1 {
+    color: #fff;
+  }
+
+  header h2 {
     color: #fff;
   }
   
@@ -113,19 +136,19 @@
     padding-right: 0.5rem;
     color: rgb(236, 188, 14); /* Optionally, add a color for the bullet symbol */
   }
+
   main {
     margin-left: 200px;
     width: calc(100% - 200px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 70px; /* Add margin-top equal to the header height */
     padding: 1rem;
-    max-width: 1200px; /* Add this line */
-    margin-left: auto; /* Add this line */
-    margin-right: auto; /* Add this line */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
-
 
 
   .content-section {
@@ -283,6 +306,12 @@
    .column.side, .column.middle{
      width: 100%;
    }}
+
+   @media screen and (max-width: 768px) {
+    .header-image{
+      display: none;
+    }
+  }
 
    .portfolio-grid {
     display: grid;
