@@ -13,6 +13,8 @@
     display: flex;
   }
   
+
+
   
   header {
     background-color: #171717;
@@ -25,6 +27,7 @@
     top: 0;
     z-index: 1;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     border-bottom: 2px solid rgb(186, 1, 1); 
@@ -58,12 +61,15 @@
     height: 100vh;
     width: 200px;
     position: fixed;
-    top: 60px;
+    top: 90px;
     left: 0;
     display: flex;
     flex-direction: column;
+    flex: 1;
+    text-align: center;
+    margin: 0;
   }
-  
+
   /* Add this to your existing styles.css */
   .nav-button {
     margin-right: 1rem;
