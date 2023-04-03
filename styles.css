@@ -337,9 +337,10 @@
   
   .project img {
     width: 100%;
+    height: auto;
+    object-fit: cover;
     transition: transform 0.3s;
   }
-  
   .project-info {
     position: absolute;
     bottom: 0;
