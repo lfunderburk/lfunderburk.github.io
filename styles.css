@@ -27,6 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 2px solid rgb(186, 1, 1); 
   }
 
 
@@ -152,6 +153,16 @@
 
 
   .content-section {
+    padding: 1rem;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    width: 80%;
+    max-width: 1000px; /* Add this line */
+    box-sizing: border-box;
+  }
+
+  .content-section2 {
     padding: 1rem;
     background-color: #fff;
     margin-bottom: 1rem;
@@ -340,6 +351,12 @@
     opacity: 0;
     transition: opacity 0.3s;
   }
+
+  .project-info h3 {
+    margin: 0;
+    color: white;
+  }
+
   
   .project:hover img {
     transform: scale(1.1);
@@ -347,6 +364,7 @@
   
   .project:hover .project-info {
     opacity: 1;
+    
   }
 
   .horizontal-bullet {
@@ -381,6 +399,7 @@
     max-width: 1000px;
     box-sizing: border-box;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
   }
 /* Go to the top button styling */
 .go-to-top {
