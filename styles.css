@@ -67,7 +67,7 @@
     flex-direction: column;
     flex: 1;
     text-align: center;
-    margin: 0;
+    padding-top: 30px;
   }
 
   /* Add this to your existing styles.css */
@@ -146,15 +146,13 @@
 
   main {
     margin-left: 200px;
-    width: calc(100% - 200px);
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 70px; /* Add margin-top equal to the header height */
     padding: 1rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
 
@@ -267,7 +265,6 @@
   
     nav {
       padding-top: 0;
-      margin-top: 1rem;
       flex-wrap: wrap;
       justify-content: center;
     }
