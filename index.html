@@ -7,13 +7,14 @@
   <title>Data Science Portfolio</title>
 </head>
 <body>
-  <nav>
+  <nav id="side-nav">
     <ul>
       <li><a href="#top">About</a></li>
       <li><a href="#resume">Resume</a></li>
     </ul>
   </nav>
   <header>
+    <button id="menu-button">&#9776;</button>
     <div class="header-image">
       <img src="./assets/line-graph.gif" alt="Your image description">
     </div>
@@ -419,5 +420,23 @@
   <script src="scripts.js"></script>
     <button id="goToTop" class="go-to-top">Go to top</button>
   <script src="top.js"></script>
+
+  
+  <script>
+    const sideNav = document.querySelector("#side-nav");
+    const content = document.querySelector("main");
+    const navButton = document.querySelector("#menu-button")
+    let navOpen = false;
+    const toggleNav = () => {
+      // toggle style
+      const width = navOpen ? "200px" : "0";
+      sideNav.style.width = width;
+      content.style.marginLeft = width;
+      // toggles icon: ✖ vs ☰
+      navButton.innerHTML = navOpen ? '&#9776;' : '&#10006;' ;
+      navOpen = !navOpen;
+    }
+    navButton.addEventListener('click', toggleNav);
+    </script>
 </body>
 </html>
