@@ -1,38 +1,76 @@
-/* Basic styling */
+/** CSS variables
+ *  learn more here: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+**/
+:root {
+  --darkest: #171717;
+  --dark: #333;
+  --medium-dark: #444;
+  --less-dark: #555;
+  --bg-color: #f4f4f4;
+  --bg-color-light: white;
+  --text-dark: black;
+  --text-light: white;
+  --side-nav-width: 200px;
+}
+
+
+/* General styles */
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    display: flex;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--dark);
+  display: flex;
+}
 
-  
-  header {
-    background-color: #171717;
-    color: #fff;
-    text-align: center;
-    padding: 0.5rem; /* Adjust the padding if needed */
-    height: 90px; /* Set a fixed height for the header */
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 2px solid rgb(186, 1, 1); 
-  }
+h1,
+h2,
+h3 {
+  color: var(--medium-dark);
+}
 
+a {
+  color: var(--dark);
+}
+
+a:hover {
+  color: var(--less-dark);
+}
+
+/* Top bar */
+
+header {
+  background-color: var(--darkest);
+  color: var(--text-light);
+  text-align: center;
+  padding: 0.5rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid rgb(186, 1, 1);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: var(--text-light);
+}
+
+header h2 {
+  font-size: 1.3rem;
+  color: var(--text-light);
+}
 
 .header-content {
   padding-left: 1rem;
@@ -44,375 +82,346 @@
 }
 
 .header-image img {
-  width: 100px; /* Adjust the image width as needed */
+  width: 100px;
   height: auto;
 }
 
-  header h1 {
-    color: #fff;
-  }
+/* Side bar */
 
-  header h2 {
-    color: #fff;
-  }
-  
-  nav {
-    background-color: #333;
-    height: 100vh;
-    width: 200px;
-    position: fixed;
-    top: 90px;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    text-align: center;
-    padding-top: 30px;
-  }
+nav {
+  background-color: var(--dark);
+  height: 100vh;
+  width: var(--side-nav-width);
+  position: fixed;
+  top: 90px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+  padding-top: 30px;
+}
 
-  /* Add this to your existing styles.css */
-  .nav-button {
-    margin-right: 1rem;
-  }
-  
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-  }
-  
-  nav a:hover {
-    background-color: #555;
-    color: #fff;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+  background-color: var(--less-dark);
+  color: var(--text-light);
+}
+
+/* Mobile Hamburger Menu button and side nav */
+
+#nav-button {
+  font-family: inherit;
+  font-feature-settings: inherit;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 30px;
+  font-size: 30px;
+  cursor: pointer;
+  width: 45px;
+  background-color: initial;
+}
+
+#nav-button:hover {
+  background-color: var(--dark);
+}
+
+@media screen and (min-width: 1440px) {
+  #nav-button {
     display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropbtn {
-    background-color: #333;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  .dropbtn:hover {
-    background-color: #555;
-    color: #fff;
-  }
-  
-  .indented-list {
-    padding-left: 1.5rem; /* Adjust the value as needed */
   }
 
-  .indented-list li {
-    padding-right: 1rem;
-    list-style: none;
-  }
-
-  .indented-list li::before {
-    content: "★"; /* Change the bullet symbol to a star */
-    padding-right: 0.5rem;
-    color: rgb(236, 188, 14); /* Optionally, add a color for the bullet symbol */
+  #side-nav {
+    width: var(--side-nav-width) !important;
   }
 
   main {
-    margin-left: 200px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 70px; /* Add margin-top equal to the header height */
-    padding: 1rem;
+    margin-left: var(--side-nav-width);
   }
+}
+
+/* Content */
+
+main {
+  margin-left: var(--side-nav-width);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  /* Add margin-top equal to the header height */
+  padding: 1rem;
+}
 
 
-  .content-section {
-    padding: 1rem;
-    background-color: #fff;
-    margin-bottom: 1rem;
-    border-radius: 4px;
-    width: 80%;
-    max-width: 1000px; /* Add this line */
-    box-sizing: border-box;
-  }
+.content-section {
+  padding: 1rem;
+  background-color: var(--bg-color-light);
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  width: 80%;
+  max-width: 1000px;
+  /* Add this line */
+  box-sizing: border-box;
+}
 
-  .content-section2 {
-    padding: 1rem;
-    background-color: #fff;
-    margin-bottom: 1rem;
-    border-radius: 4px;
-    width: 80%;
-    max-width: 1000px; /* Add this line */
-    box-sizing: border-box;
-  }
+.content-section-2 {
+  padding: 1rem;
+  background-color: var(--bg-color-light);
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  width: 80%;
+  max-width: 1000px;
+  /* Add this line */
+  box-sizing: border-box;
+}
 
-  .content-gif{
-    padding: 1rem;
-    background-color: #fff;
-    margin-bottom: 1rem;
-    border-radius: 4px;
-    width: 40%;
-    max-width: 1000px; /* Add this line */
-    box-sizing: border-box;
-  }
-  
-  
-  h1, h2, h3 {
-    color: #444;
-  }
-  
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 1rem;
-  }
+.content-gif {
+  padding: 1rem;
+  background-color: var(--bg-color-light);
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  width: 40%;
+  max-width: 1000px;
+  /* Add this line */
+  box-sizing: border-box;
+}
 
-  table tr:nth-child(odd) {
-    background-color: #f9f9f9;
-  }
-  
-  table tr:nth-child(even) {
-    background-color: #e8e8e8;
-  }
-  
-  th, td {
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #333; /* Change this value */
-    color: #fff; /* Change this value */
-  }
-  
-  button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    font-size: 16px;
-    margin-top: 1rem;
-  }
-  
-  button:hover {
-    background-color: #555;
-  }
-  
-  a {
-    color: #333;
-  }
-  
-  a:hover {
-    color: #555;
-  }
 
-  .nav-button {
-    background-color: #333;
-    color: #fff;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    display: block;
-    width: 100%;
-    text-align: left;
-    margin-bottom: 0.5rem;
-  }
-  
-  .nav-button:hover {
-    background-color: #555;
-  }
+.indented-list {
+  padding-left: 1.5rem;
+  /* Adjust the value as needed */
+}
+
+.indented-list li {
+  padding-right: 1rem;
+  list-style: none;
+}
+
+.indented-list li::before {
+  content: "★";
+  /* Change the bullet symbol to a star */
+  padding-right: 0.5rem;
+  color: rgb(236, 188, 14);
+  /* Optionally, add a color for the bullet symbol */
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+table tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+table tr:nth-child(even) {
+  background-color: #e8e8e8;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background-color: var(--dark);
+  /* Change this value */
+  color: var(--text-light);
+  /* Change this value */
+}
+
+button {
+  background-color: var(--dark);
+  color: var(--text-light);
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: var(--less-dark);
+}
 
 /* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
-    header {
-      flex-direction: column;
-    }
-  
-    nav {
-      padding-top: 0;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  
-    .nav-button {
-      font-size: 14px;
-      padding: 0.25rem 0.5rem;
-      margin: 0.25rem;
-    }
-  
-    main {
-      max-width: 100%;
-      padding: 1rem;
-    }
-  
-    .content-section {
-      width: 100%;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-    }
-  
-    p, table {
-      font-size: 1rem;
-    }
-  
-    table {
-      width: 100%;
-      table-layout: fixed;
-      word-wrap: break-word;
-    }
-  
-    th, td {
-      padding: 0.5rem;
-    }
-  }
-  
-  @media (max-width: 350px) {
-    .one {
-       width: auto;
- 
-    }
-    .two {
-       width: auto;
-    }
-    .three {
-       width: auto;
-    }
- }
- 
- @media screen and (max-width:600px) {
-   .column.side, .column.middle{
-     width: 100%;
-   }}
-
-   @media screen and (max-width: 768px) {
-    .header-image{
-      display: none;
-    }
+  header {
+    flex-direction: column;
   }
 
-   .portfolio-grid {
-    display: grid;
-    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-  
-  .project {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .project img {
-    width: 100%;
-    object-fit: cover;
-    transition: transform 0.3s;
-  }
-  .project-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-
-  .project-info h3 {
-    margin: 0;
-    color: white;
-  }
-
-  
-  .project:hover img {
-    transform: scale(1.1);
-  }
-  
-  .project:hover .project-info {
-    opacity: 1;
-    
-  }
-
-  .horizontal-bullet {
-    list-style: none;
-    display: flex;
+  nav {
+    padding-top: 0;
     flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
+    justify-content: center;
   }
-  
-  .horizontal-bullet li {
-    padding-right: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  
 
-  .horizontal-bullet li::before {
-    content: "★"; /* Change the bullet symbol to a star */
-    padding-right: 0.5rem;
-    color: #f00; /* Optionally, add a color for the bullet symbol */
+  .nav-button {
+    font-size: 14px;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
   }
-  
-  .side-by-side-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+
+  main {
+    max-width: 100%;
     padding: 1rem;
-    background-color: #fff;
-    margin-bottom: 1rem;
-    border-radius: 4px;
-    width: 80%;
-    max-width: 1000px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    
   }
+
+  .content-section {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p,
+  table {
+    font-size: 1rem;
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .one {
+    width: auto;
+
+  }
+
+  .two {
+    width: auto;
+  }
+
+  .three {
+    width: auto;
+  }
+}
+
+@media screen and (max-width:600px) {
+
+  .column.side,
+  .column.middle {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-image {
+    display: none;
+  }
+}
+
+.portfolio-grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+}
+
+.project img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--text-light);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project-info h3 {
+  margin: 0;
+  color: var(--text-light);
+}
+
+.project:hover img {
+  transform: scale(1.1);
+}
+
+.project:hover .project-info {
+  opacity: 1;
+
+}
+
+.horizontal-bullet {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.horizontal-bullet li {
+  padding-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+
+.horizontal-bullet li::before {
+  content: "★";
+  /* Change the bullet symbol to a star */
+  padding-right: 0.5rem;
+  color: #f00;
+  /* Optionally, add a color for the bullet symbol */
+}
+
+.side-by-side-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: var(--bg-color-light);
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  width: 80%;
+  max-width: 1000px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
 /* Go to the top button styling */
 .go-to-top {
   display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--dark);
+  color: var(--text-light);
   border: none;
   cursor: pointer;
   padding: 0.5rem 1rem;
@@ -421,5 +430,5 @@
 }
 
 .go-to-top:hover {
-  background-color: #555;
+  background-color: var(--less-dark);
 }
