@@ -183,6 +183,38 @@ main {
   box-sizing: border-box;
 }
 
+.blog-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 0;
+  width: 100%;
+}
+
+.blog-post {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  text-decoration: initial;
+  border-radius: 5px;
+  padding: 15px;
+}
+.blog-post:hover {
+  background: #f4f4f4;
+}
+
+.blog-post-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  padding: 2rem 2rem 1rem;
+}
+.blog-post p {
+  margin-bottom: 0.5em;
+}
+.blog-post-date {
+  font-weight: 500;
+}
+
 .content-gif {
   padding: 1rem;
   background-color: var(--bg-color-light);
