@@ -478,15 +478,14 @@
     const sideNav = document.querySelector("#side-nav");
     const content = document.querySelector("main");
     const navButton = document.querySelector("#nav-button")
-    let navOpen = false;
+    let isNavOpen = false;
     const toggleNav = () => {
       // toggle style
-      const width = navOpen ? "200px" : "0";
-      sideNav.style.width = width;
-      content.style.marginLeft = width;
+      sideNav.classList.toggle('nav-is-open');
+      content.classList.toggle('nav-is-open');
       // toggles icon: ✖ vs ☰
-      navButton.innerHTML = navOpen ? '&#9776;' : '&#10006;' ;
-      navOpen = !navOpen;
+      navButton.innerHTML = isNavOpen ? '&#9776;' : '&#10006;' ;
+      isNavOpen = !isNavOpen;
     }
     navButton.addEventListener('click', toggleNav);
     </script>
